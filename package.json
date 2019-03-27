@@ -1,14 +1,14 @@
 {
-  "name": "stylelint-no-px",
+  "name": "stylelint-no-unit",
   "version": "0.12.1",
-  "description": "A stylelint custom rule to ensure using rem instead of px",
+  "description": "A stylelint custom rule to ensure people use the correct units",
   "main": "index.js",
   "scripts": {
     "test": "tape test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/meowtec/stylelint-no-px.git"
+    "url": "https://github.com/philschatz/stylelint-no-unit.git"
   },
   "keywords": [
     "stylelint",
@@ -20,9 +20,9 @@
   "author": "meowtec<bertonzh@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meowtec/stylelint-no-px/issues"
+    "url": "https://github.com/philschatz/stylelint-no-unit/issues"
   },
-  "homepage": "https://github.com/meowtec/stylelint-no-px",
+  "homepage": "https://github.com/philschatz/stylelint-no-unit",
   "devDependencies": {
     "stylelint": "^8.0.0",
     "stylelint-test-rule-tape": "^0.2.0",

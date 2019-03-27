@@ -14,9 +14,23 @@ const defaultTest = {
     { code: '.foo { border-left: 1px solid #333; }' },
     { code: '.foo { border-left: 0px solid #333; }' },
     { code: '.foo { width: 1px; }' },
+    { code: '.foo { color: moccasin; }' },
   ],
 
   reject: [
+    { line: 1, column: 8, code: '.foo { font-size: 15in; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15q; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15mm; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15cm; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15pt; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15pc; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15em; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15ex; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15ch; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15vw; }', },
+    { line: 1, column: 8, code: '.foo { font-size: 15vh; }', },
+    { line: 1, column: 8, code: '.foo { font-size: ~\'@{width}in\'; }', },
+    // { line: 1, column: 8, code: '.foo { font-size: ~\'@{width}in solid\'; }', },
     {
       code: '.foo { font-size: 15px; }',
       line: 1,
