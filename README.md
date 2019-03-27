@@ -1,8 +1,8 @@
-# stylelint-no-px
+# stylelint-no-unit
 
-![https://travis-ci.org/meowtec/stylelint-no-px](https://travis-ci.org/meowtec/stylelint-no-px.svg?branch=master)
+![https://travis-ci.org/philschatz/stylelint-no-unit](https://travis-ci.org/philschatz/stylelint-no-unit.svg?branch=master)
 
-A stylelint custom rule to ensure rem instead of px.
+A stylelint custom rule to ensure rem instead of px. Forked from [meowtec/stylelint-no-px](https://github.com/meowtec/stylelint-no-px).
 
 If you are using `rem` (instead of `px`) as **1px solution** or for other purposes, you should need a stylelint rule to enforce using rem. Thats it.
 
@@ -14,7 +14,7 @@ border: 1px solid #eee; // ok
 ## Installation
 
 ```
-npm install stylelint-no-px --save-dev
+npm install stylelint-no-unit --save-dev
 ```
 
 ## Usage
@@ -25,13 +25,13 @@ Add it to your stylelint config
 // .stylelintrc
 {
   "plugins": [
-    "stylelint-no-px"
+    "stylelint-no-unit"
   ],
   "rules": {
     // ...
-    "meowtec/no-px": [true, { "ignore": ["1px"] }],
+    "openstax/no-unit": [true, { "ignore": ["1px"] }],
     // or just:
-    "meowtec/no-px": true,
+    "openstax/no-unit": true,
     // ...
   }
 }
@@ -53,7 +53,7 @@ ignore check for functions.
 
 ```javascript
 // all 1px is ok
-"meowtec/no-px": [true, { "ignore": ["1px"] }],
+"openstax/no-unit": [true, { "ignore": ["1px"] }],
 ```
 
 ```less
@@ -72,7 +72,7 @@ ignore check for functions.
 ```javascript
 //  - all `1px` or `font` is ok
 //  - rem(Npx) is ok
-"meowtec/no-px": [true, { "ignore": ["1px", "font"], "ignoreFunctions": ["rem"] }],
+"openstax/no-unit": [true, { "ignore": ["1px", "font"], "ignoreFunctions": ["rem"] }],
 ```
 
 ```less
@@ -90,7 +90,7 @@ ignore check for functions.
 
 ```javascript
 // only `border + 1px` is ok
-"meowtec/no-px": [true, { "ignore": ["border 1px"] }],
+"openstax/no-unit": [true, { "ignore": ["border 1px"] }],
 ```
 
 ```less
